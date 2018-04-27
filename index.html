@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <title>Главная</title>
-    <link href="favicon.png" rel="shortcut icon">
+    <link href="favicon.png" rel="shortcut icon"> 
+    
+    <!-- css include -->
     <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.min.css" rel="stylesheet">    
+    <link href="css/owl.carousel.min.css" rel="stylesheet">    
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">    
     <link href="style.css" rel="stylesheet">
   </head>
   <body>
@@ -15,7 +20,7 @@
           <li><span>MTS:</span> 8 021 <span>242 66 26</span></li>
           <li><span>MTS:</span> 8 029 <span>360 66 99</span></li>
           <li><span>Velcom:</span> 8 033 <span>360 66 99</span></li>
-          <li><a href="#" class="" title="">Перезвоните мне</a></li>
+          <li><a data-fancybox data-src="#order-call" href="javascript:;" title="">Перезвоните мне</a></li>
         </ul>
       </div>
       
@@ -70,7 +75,7 @@
                 <input type="text" placeholder="Телефон" class="form-field">
               </p>
               <p>
-                <input type="button" value="ЗАПИСАТьСЯ" class="form-button">
+                <input type="button" value="ЗАПИСАТьСЯ" class="red-button form-button">
               </p>
               <p class="promo__form-time">Заявки обрабатываются <br>с 9.00 до 19.00</p>
             </form>
@@ -92,13 +97,25 @@
         <div class="container">
           <h2 class="section-title section-title--services">НАШИ УСЛУГИ</h2>
           <div class="services__slider">
-            <div class="services__slider-nav prev"><span class="visually-hidden">Назад</span></div>
-            <div class="services__slider-nav next"><span class="visually-hidden">Вперед</span></div>
-            <div class="js--services__slider">
+            <div class="services__slider-nav prev js--services__slider-nav--prev"><span class="visually-hidden">Назад</span></div>
+            <div class="services__slider-nav next js--services__slider-nav--next"><span class="visually-hidden">Вперед</span></div>
+            <div class="owl-carousel owl-theme js--services__slider">
               <div class="item">
                 <a href="" title="" class="services__slider-item">
                   <img class="services__slider-thumbnail" src="img/thumbnail-services.png" alt="">
                   <h3 class="services__slider-title">Устранение <br>запотеваний</h3>
+                </a>
+              </div>
+              <div class="item">
+                <a href="" title="" class="services__slider-item">
+                  <img class="services__slider-thumbnail" src="img/thumbnail-services.png" alt="">
+                  <h3 class="services__slider-title">Установка, регулировка, ремонт дверных замков <br> и петель</h3>
+                </a>
+              </div>
+              <div class="item">
+                <a href="" title="" class="services__slider-item">
+                  <img class="services__slider-thumbnail" src="img/thumbnail-services.png" alt="">
+                  <h3 class="services__slider-title">Установка <br>москитных сеток</h3>
                 </a>
               </div>
               <div class="item">
@@ -125,9 +142,9 @@
             <span class="reception__description--green">Результат нашей работы, это 99,9% довольных заказчиков</span>, обращаясь к нам <br>вы избигаете <span class="reception__description--red">проблем с которыми сталкиваются 80% заказчиков</span>
           </p>
           <div class="reception__slider">
-            <div class="reception__slider-nav prev"><span class="visually-hidden">Назад</span></div>
-            <div class="reception__slider-nav next"><span class="visually-hidden">Вперед</span></div>
-            <div class="js--reception__slider">
+            <div class="reception__slider-nav prev js--reception__slider-nav--prev"><span class="visually-hidden">Назад</span></div>
+            <div class="reception__slider-nav next js--reception__slider-nav--next"><span class="visually-hidden">Вперед</span></div>
+            <div class="js--reception__slider owl-carousel owl-theme">
               <div class="item">
                 <div class="reception__slider-item">
                   <p class="reception__slider--green">Мы предоставляем <br>гарантию на наши работы <br>до 60 месяцев. Мы <br>отвечаем за качество!</p>
@@ -135,7 +152,21 @@
                   <p class="reception__slider--red">Фирмы не предоставляют гарантию на свои работы, или она <br>слишком мала</p>
                 </div>
               </div>
-              <div class="item active">
+              <div class="item">
+                <div class="reception__slider-item">
+                  <p class="reception__slider--green">Наши мастера имеют квалификацию и разряд, большой опыт работы</p>
+                  <div class="reception__slider-border"></div>
+                  <p class="reception__slider--red">Работы выполняют неопытные <br>мастера</p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="reception__slider-item">
+                  <p class="reception__slider--green">Мы предоставляем <br>гарантию на наши работы <br>до 60 месяцев. Мы <br>отвечаем за качество!</p>
+                  <div class="reception__slider-border"></div>
+                  <p class="reception__slider--red">Фирмы не предоставляют гарантию на свои работы, или она <br>слишком мала</p>
+                </div>
+              </div>
+              <div class="item">
                 <div class="reception__slider-item">
                   <p class="reception__slider--green">Наши мастера имеют квалификацию и разряд, большой опыт работы</p>
                   <div class="reception__slider-border"></div>
@@ -151,7 +182,7 @@
               </div>
             </div>
           </div>
-          <a href="" class="border-button" title="">оставить заявку</a>
+          <a data-fancybox data-src="#leave-request" href="javascript:;" class="border-button" title="">оставить заявку</a>
         </div>
       </section>
       
@@ -195,7 +226,7 @@
               <div class="comments__item-content">После "бытовой катастрофы" пришло в негодность окно на кухне.  Приехали и оперативно заменили поврежденное окно. Рекомендую.</div>
             </article>
           </div>
-          <a href="" class="border-button" title="">оставить заявку</a>
+          <a href="" class="border-button" title="">Смотреть все отзывы</a>
         </div>
       </section>
       
@@ -281,10 +312,10 @@
             </ul>
             <form class="page-footer__form">
               <p>
-                <input type="text" placeholder="Введите свой е-mail для получения рассылки" class="subscribe-field">
+                <input type="text" placeholder="Введите свой е-mail для получения рассылки" class="dark-field subscribe-field">
               </p>
               <p>
-                <input type="button" value="Подписаться" class="subscribe-button">
+                <input type="button" value="Подписаться" class="red-button subscribe-button">
               </p>
             </form>
           </div>
@@ -293,7 +324,7 @@
             <a href="" class="page-footer__logo" title="">
               <img src="img/logo-footer.png" alt="">
             </a>
-            <a href="№" class="page-footer__to-top" title="">Вверх</a>
+            <a href="#" class="js--to-top page-footer__to-top" title="">Вверх</a>
             <nav class="page-footer__menu">
               <ul class="page-footer__nav-list">
                 <li><a href="#" title="">Главная</a></li>
@@ -322,5 +353,61 @@
       </div>
     </footer>
     
+    <!-- модальные окна -->
+    <div id = "order-call" class = "order-call modal-window">
+			<div class = "modal-window__content">
+				<div class = "order-call__title">ПЕРЕЗВОНИТЕ МНЕ</div>
+				<p class="order-call__description">В самое ближайшее время мы с вами свяжемся</p>
+        <form>
+          <p>
+            <input type="text" placeholder="Имя *" class="form-field">
+          </p>
+          <p>
+            <input type="text" placeholder="Телефон *" class="form-field">
+          </p>
+          <p>
+            <input type="button" value="Отправить" class="red-button form-button">
+          </p>
+        </form>
+			</div>
+		</div>
+    <!-- -->
+     <div id = "leave-request" class = "leave-request modal-window">
+			<div class = "modal-window__content">
+				<div class = "order-call__title">Оставить заявку</div>
+				<p class="order-call__description">В самое ближайшее время мы с вами свяжемся</p>
+        <form>
+          <p>
+            <input type="text" placeholder="Имя *" class="form-field">
+          </p>
+          <p>
+            <input type="text" placeholder="Телефон *" class="form-field">
+          </p>
+          <p>
+            <input type="text" placeholder="Email" class="form-field">
+          </p>
+          <p>
+            <select class="form-field form-select">
+              <option value="">Тип услуги:</option>
+              <option value="">Ремонт дверей</option>
+              <option value="">Ремонт балконов</option>
+              <option value="">Ремонт окон</option>
+            </select>
+          </p>
+          <p>
+            <textarea class="form-field form-textarea form-field" placeholder="Комментарий"></textarea>
+          </p>
+          <p>
+            <input type="button" value="Отправить" class="red-button form-button">
+          </p>
+        </form>
+			</div>
+		</div>
+    
+    <!-- js include -->
+    <script src = "js/jquery-3.3.1.min.js"></script>
+    <script src = "js/jquery.fancybox.min.js"></script>    
+    <script src = "js/owl.carousel.min.js"></script>    
+    <script src = "js/common.js"></script>    
   </body>
 </html>

@@ -41,6 +41,13 @@
 }
 @font-face {
 	font-family: "SF UI Display";
+	src: url("fonts/SF-UI-Display-Heavy.ttf");
+  
+	font-style: normal;
+	font-weight: 800;
+}
+@font-face {
+	font-family: "SF UI Display";
 	src: url("fonts/SF-UI-Display-Black.ttf");
   
 	font-style: normal;
@@ -88,6 +95,26 @@ img {
 	clip: rect(0 0 0 0);
 	
   border: 0;
+}
+.dark-field {
+  padding: 12px 24px;
+  
+  font-family: inherit;
+  font-weight: 500;
+  color: #9fa4a8;
+  font-size: 13px;
+  line-height: 32px;
+  
+  border: none;
+  background: #4a5156;
+  box-sizing: border-box;
+}
+.red-button {
+  text-align: center;
+  color: #fff;
+  
+  background: #dc3638;
+  border: none;
 }
 /**
 * Шапка: телефоны
@@ -396,12 +423,8 @@ img {
   width: 100%;
   
   line-height: 46px;
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
   
-  background: #dc3638;
-  border: none;
+  text-transform: uppercase;
 }
 .promo__form .promo__form-time {
   padding: 2px 0;
@@ -469,15 +492,10 @@ img {
   
   padding: 0 55px;
 }
-.js--services__slider {
-  display: flex;
-  justify-content: space-between;
-}
 .services__slider-item {
   display: block;
   padding: 40px 50px 10px 50px;
   height: 380px;
-  width: 385px;
   
   text-decoration: none;
   
@@ -491,7 +509,7 @@ img {
 .services__slider-thumbnail {
   display: block;
   margin: 0 auto 28px auto;
-  width: 195px;
+  width: 195px !important;
   height: 195px;
   
   border-radius: 50%;
@@ -515,6 +533,8 @@ img {
 .next {
   width: 30px;
   height: 30px;
+  
+  cursor: pointer;
 }
 .prev {
   background: url("img/prev-nav.png") no-repeat center;
@@ -559,7 +579,7 @@ img {
 .reception__slider {
   position: relative;
   
-  padding: 40px 55px;
+  padding: 0 55px;
   margin-bottom: 28px;
 }
 .reception__slider-nav {
@@ -572,9 +592,8 @@ img {
 .reception__slider-nav.next {
   right: 7px;
 }
-.js--reception__slider {
-  display: flex;
-  justify-content: space-between;
+.js--reception__slider .owl-stage-outer {
+  padding: 40px 0;
 }
 .reception__slider-item {
   display: -webkit-box;
@@ -586,7 +605,6 @@ img {
   flex-direction: column;
   padding: 40px;  
   height: 380px;
-  width: 385px;
   
   text-align: center;
   
@@ -594,7 +612,7 @@ img {
   border-radius: 10px;
   box-sizing: border-box;
 }
-.item.active .reception__slider-item {
+.owl-item.center .reception__slider-item {
   border-color: #fff;
   background: #fff;
   -webkit-box-shadow: 0px 0px 21px 0px rgba(74,81,86,0.3);
@@ -841,7 +859,7 @@ img {
 }
 .partners__item {
   width: 260px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   
   text-align: center;
 }
@@ -852,6 +870,146 @@ img {
   font-size: 16px;
   line-height: 1.6;
   font-weight: 500;
+}
+/**
+* Контент: форма захвата
+**/
+.trigger-form {
+  padding: 30px 0 40px 0;
+  
+  background: #35383b;
+}
+
+.trigger-form p {
+  padding: 0;
+  margin: 0;
+}
+.trigger-form .trigger-form__title {
+  margin-bottom: 20px;
+  
+  font-size: 21px;
+  line-height: 48px;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+.trigger-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+
+  width: 830px;
+  margin: 0 auto;
+}
+.trigger-form__field {
+  width: 284px;
+}
+.trigger-form__button {
+  width: 224px;  
+  height: 56px;
+  
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 56px;
+  text-transform: uppercase;
+}
+/**
+* Контент: материал
+**/
+.content-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  
+  padding-bottom: 70px;
+}
+.page-title {
+  padding: 30px 0;
+  width: 100%;
+  
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #4a5156;
+  font-weight: 900;
+}
+.main-content {
+  width: 868px;
+}
+.main-content p {
+  margin: 24px 0;
+  
+  line-height: 24px;
+}
+.main-content > :first-child {
+  margin-top: 0;
+}
+/**
+* Контент: боковой столбик
+**/
+.main-aside {
+  width: 386px;
+}
+.aside-category {
+  padding: 0;
+  margin: 0;
+  
+  list-style: none;
+}
+.aside-category li {
+  margin-bottom: 15px;
+}
+.aside-category a {
+  display: block;
+  padding: 16px 20px;
+  
+  font-size: 19px;
+  line-height: 28px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #4a5156;
+  
+  border: 1px solid #dadada;
+  border-radius: 16px;
+}
+.aside-category a:hover {
+  border-color: #60b148;
+}
+/**
+* Контент: категория
+**/
+.category-title {
+  font-size: 44px;
+  width: 100%;\
+  text-transform: uppercase;
+  color: #4a5156;
+  font-weight: 900;
+}
+.category__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  
+  padding-bottom: 30px;
+}
+.category__list .services__slider-item {
+  width: 385px;
+}
+.category__list .item {
+  margin-bottom: 60px;
 }
 /**
 * Футер: контакты
@@ -904,32 +1062,17 @@ img {
   margin: 0;
 }
 .subscribe-field {
-  padding: 12px 24px;
   width: 510px;
   margin-right: 10px;
-  
-  font-family: inherit;
-  font-weight: 500;
-  color: #9fa4a8;
-  font-size: 13px;
-  line-height: 32px;
-  
-  border: none;
-  background: #4a5156;
-  box-sizing: border-box;
 }
 .subscribe-button {
   width: 180px;
   height: 56px;
   
   line-height: 56px;
-  text-align: center;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
   
-  background: #dc3638;  
-  border: none;
+  font-size: 16px;
+  font-weight: 600; 
 }
 /**
 * Футер: навигация
@@ -1030,4 +1173,62 @@ img {
 .page-footer__copyright-list a {
   color: #9fa4a8;
   text-decoration: none;
+}
+/**
+* Модальное окно: заказать звонок
+**/
+.modal-window {
+  display: none;
+  padding: 0;
+}
+.order-call form {
+  width: 80%;
+  margin: 0 auto;
+}
+.modal-window__content {
+  width: 540px;
+  padding: 55px 85px;
+  
+  box-sizing: border-box;
+  background-color: #f7f7f8;
+}
+.order-call .modal-window__content {
+  background-image: url(img/order-call-bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+.order-call__title {
+  margin-bottom: 20px;
+  
+  font-size: 36px;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #60b148;
+  text-align: center;
+}
+.order-call__description {
+  padding: 0;
+  margin: 0 0 30px 0;
+  
+  font-size: 14px;
+  text-align: center;
+}
+/**
+* Модальное окно: оставить заявку
+**/
+.form-select {
+  background-color: #fff;
+  background-image: url(img/arrow-select.png);
+  background-position: 97% 48%;
+  background-repeat: no-repeat;
+  
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  appearance: none;
+}
+.form-textarea {
+  height: 120px;
+  
+  resize: none;
 }
